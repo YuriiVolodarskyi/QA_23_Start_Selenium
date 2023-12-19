@@ -22,7 +22,7 @@ public class Index {
         //by tag name
         WebElement element = wd.findElement(By.tagName("button"));
         List<WebElement> list = wd.findElements(By.tagName("a"));
-
+        WebElement element1 = wd.findElement(By.tagName("form"));
 
     }
 
