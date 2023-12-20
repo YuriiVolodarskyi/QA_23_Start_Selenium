@@ -20,9 +20,27 @@ public class Index {
     @Test
     public void cssLocators() {
         //by tag name
-        WebElement element = wd.findElement(By.tagName("button"));
-        List<WebElement> list = wd.findElements(By.tagName("a"));
-        WebElement element1 = wd.findElement(By.tagName("form"));
+        WebElement elementButton = wd.findElement(By.tagName("button"));
+        System.out.println(elementButton.getTagName());
+        List<WebElement> listA = wd.findElements(By.tagName("a"));
+        System.out.println("size listA --> " + listA.size());
+        WebElement elementForm = wd.findElement(By.tagName("form"));
+        System.out.println(elementForm.getTagName());
+        WebElement elementTable = wd.findElement(By.tagName("table"));
+        System.out.println(elementTable.getTagName());
+        WebElement elementInput = wd.findElement(By.tagName("input"));
+        System.out.println(elementInput.getTagName());
+        System.out.println("value type --> " + elementInput.getAttribute("type"));
+        System.out.println("value placeholder -->" + elementInput.getAttribute("placeholder"));
+        WebElement elementTbody = wd.findElement(By.tagName("tbody"));
+        System.out.println(elementTbody.getTagName());
+        List<WebElement> listTr = wd.findElements(By.tagName("tr"));
+        System.out.println("size listTr --> " + listTr.size());
+        WebElement elementNav = wd.findElement(By.cssSelector("[id='nav']"));
+        WebElement elementCountrytable = wd.findElement(By.cssSelector("[id=country-table]"));
+        WebElement elementAlert = wd.findElement(By.cssSelector("[id=alert]"));
+        WebElement elementP = wd.findElement(By.tagName("p"));
+        System.out.println("attribute p --> " + elementP.getAttribute("class"));
 
     }
 
